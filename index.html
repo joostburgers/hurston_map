@@ -8230,69 +8230,16 @@ a.anchor-link {
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=d3ac9ea1-5eaf-4134-97f2-8e37c4b5a1ab">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=d3ac9ea1-5eaf-4134-97f2-8e37c4b5a1ab">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [62]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [78]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="n">df_sentences</span><span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_pickle</span><span class="p">(</span><span class="s1">'basic_geoparser/df_sentences_places.pickle'</span><span class="p">)</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1">#df_sentences= pd.read_pickle('basic_geoparser/df_sentences_places.pickle')</span>
 </pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-<div class="jp-OutputArea jp-Cell-outputArea">
-<div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr" tabindex="0">
-<pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">FileNotFoundError</span>                         Traceback (most recent call last)
-Cell <span class="ansi-green-fg">In[62], line 1</span>
-<span class="ansi-green-fg">----&gt; 1</span> df_sentences<span style="color: rgb(98,98,98)">=</span> pd<span style="color: rgb(98,98,98)">.</span>read_pickle(<span style="color: rgb(175,0,0)">'</span><span style="color: rgb(175,0,0)">basic_geoparser/df_sentences_places.pickle</span><span style="color: rgb(175,0,0)">'</span>)
-
-File <span class="ansi-green-fg">~/anaconda3/lib/python3.12/site-packages/pandas/io/pickle.py:185</span>, in <span class="ansi-cyan-fg">read_pickle</span><span class="ansi-blue-fg">(filepath_or_buffer, compression, storage_options)</span>
-<span class="ansi-green-intense-fg ansi-bold">    123</span> <span style="color: rgb(175,0,0)">"""</span>
-<span class="ansi-green-intense-fg ansi-bold">    124</span> <span style="color: rgb(175,0,0)">Load pickled pandas object (or any object) from file.</span>
-<span class="ansi-green-intense-fg ansi-bold">    125</span> 
-<span class="ansi-green-fg">   (...)</span>
-<span class="ansi-green-intense-fg ansi-bold">    182</span> <span style="color: rgb(175,0,0)">4    4    9</span>
-<span class="ansi-green-intense-fg ansi-bold">    183</span> <span style="color: rgb(175,0,0)">"""</span>
-<span class="ansi-green-intense-fg ansi-bold">    184</span> excs_to_catch <span style="color: rgb(98,98,98)">=</span> (<span class="ansi-bold" style="color: rgb(215,95,95)">AttributeError</span>, <span class="ansi-bold" style="color: rgb(215,95,95)">ImportError</span>, <span class="ansi-bold" style="color: rgb(215,95,95)">ModuleNotFoundError</span>, <span class="ansi-bold" style="color: rgb(215,95,95)">TypeError</span>)
-<span class="ansi-green-fg">--&gt; 185</span> <span class="ansi-bold" style="color: rgb(0,135,0)">with</span> get_handle(
-<span class="ansi-green-intense-fg ansi-bold">    186</span>     filepath_or_buffer,
-<span class="ansi-green-intense-fg ansi-bold">    187</span>     <span style="color: rgb(175,0,0)">"</span><span style="color: rgb(175,0,0)">rb</span><span style="color: rgb(175,0,0)">"</span>,
-<span class="ansi-green-intense-fg ansi-bold">    188</span>     compression<span style="color: rgb(98,98,98)">=</span>compression,
-<span class="ansi-green-intense-fg ansi-bold">    189</span>     is_text<span style="color: rgb(98,98,98)">=</span><span class="ansi-bold" style="color: rgb(0,135,0)">False</span>,
-<span class="ansi-green-intense-fg ansi-bold">    190</span>     storage_options<span style="color: rgb(98,98,98)">=</span>storage_options,
-<span class="ansi-green-intense-fg ansi-bold">    191</span> ) <span class="ansi-bold" style="color: rgb(0,135,0)">as</span> handles:
-<span class="ansi-green-intense-fg ansi-bold">    192</span>     <span style="color: rgb(95,135,135)"># 1) try standard library Pickle</span>
-<span class="ansi-green-intense-fg ansi-bold">    193</span>     <span style="color: rgb(95,135,135)"># 2) try pickle_compat (older pandas version) to handle subclass changes</span>
-<span class="ansi-green-intense-fg ansi-bold">    194</span>     <span style="color: rgb(95,135,135)"># 3) try pickle_compat with latin-1 encoding upon a UnicodeDecodeError</span>
-<span class="ansi-green-intense-fg ansi-bold">    196</span>     <span class="ansi-bold" style="color: rgb(0,135,0)">try</span>:
-<span class="ansi-green-intense-fg ansi-bold">    197</span>         <span style="color: rgb(95,135,135)"># TypeError for Cython complaints about object.__new__ vs Tick.__new__</span>
-<span class="ansi-green-intense-fg ansi-bold">    198</span>         <span class="ansi-bold" style="color: rgb(0,135,0)">try</span>:
-
-File <span class="ansi-green-fg">~/anaconda3/lib/python3.12/site-packages/pandas/io/common.py:882</span>, in <span class="ansi-cyan-fg">get_handle</span><span class="ansi-blue-fg">(path_or_buf, mode, encoding, compression, memory_map, is_text, errors, storage_options)</span>
-<span class="ansi-green-intense-fg ansi-bold">    873</span>         handle <span style="color: rgb(98,98,98)">=</span> <span style="color: rgb(0,135,0)">open</span>(
-<span class="ansi-green-intense-fg ansi-bold">    874</span>             handle,
-<span class="ansi-green-intense-fg ansi-bold">    875</span>             ioargs<span style="color: rgb(98,98,98)">.</span>mode,
-<span class="ansi-green-fg">   (...)</span>
-<span class="ansi-green-intense-fg ansi-bold">    878</span>             newline<span style="color: rgb(98,98,98)">=</span><span style="color: rgb(175,0,0)">"</span><span style="color: rgb(175,0,0)">"</span>,
-<span class="ansi-green-intense-fg ansi-bold">    879</span>         )
-<span class="ansi-green-intense-fg ansi-bold">    880</span>     <span class="ansi-bold" style="color: rgb(0,135,0)">else</span>:
-<span class="ansi-green-intense-fg ansi-bold">    881</span>         <span style="color: rgb(95,135,135)"># Binary mode</span>
-<span class="ansi-green-fg">--&gt; 882</span>         handle <span style="color: rgb(98,98,98)">=</span> <span style="color: rgb(0,135,0)">open</span>(handle, ioargs<span style="color: rgb(98,98,98)">.</span>mode)
-<span class="ansi-green-intense-fg ansi-bold">    883</span>     handles<span style="color: rgb(98,98,98)">.</span>append(handle)
-<span class="ansi-green-intense-fg ansi-bold">    885</span> <span style="color: rgb(95,135,135)"># Convert BytesIO or file objects passed with an encoding</span>
-
-<span class="ansi-red-fg">FileNotFoundError</span>: [Errno 2] No such file or directory: 'basic_geoparser/df_sentences_places.pickle'</pre>
 </div>
 </div>
 </div>
